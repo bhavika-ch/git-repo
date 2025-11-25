@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fafafa;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+.logo span { color: #ff571a; }
+
+nav a {
+    margin: 0 18px;
+    font-size: 15px;
+    color: #333;
+    transition: 0.3s;
+}
+nav a:hover { color: #ff571a; }
+
+.signup-btn {
+    padding: 10px 22px;
+    background: #ff571a;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.hero-text h1 { font-size: 45px; }
+.hero-text span { color: #ff571a; }
+.hero-text p { margin: 14px 0 25px; width: 85%; }
+
+.cta, .read-more, .explore {
+    padding: 12px 22px;
+    border-radius: 6px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cta { background: #ff571a; color: white; }
+.read-more, .explore { background: #fff; border: 1px solid #ff571a; color: #ff571a; }
+.cta:hover { transform: translateY(-3px); }
+
+.services h2, .agency h2, .testimonials h2 { text-align: center; margin-bottom: 40px; }
+.service-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 24%;
+    transition: 0.3s;
+}
+.box:hover { transform: translateY(-6px); }
+
+.solutions, .agency {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.testimonials .reviews {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 32%;
+    transition: 0.3s;
+}
+.card:hover { box-shadow: 0 0 18px rgba(0,0,0,0.1); }
+
+.final-cta {
+    text-align: center;
+    background: #ff571a;
+    padding: 50px 8%;
+    color: white;
+}
+.final-cta .cta {
+    background: white;
+    color: #ff571a;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+footer .logo span { color: #ff571a; }
+
+/* ✨ Animation */
+.fade-in { animation: fade 1.2s ease-in forwards; opacity: 0; }
+@keyframes fade { to { opacity: 1; } }
+
+.slide-up { animation: up 1.2s ease-in forwards; opacity: 0; transform: translateY(40px); }
+@keyframes up { to { opacity: 1; transform: translateY(0); } }
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+    .hero, .solutions, .agency { flex-direction: column; text-align: center; }
+    .service-boxes, .testimonials .reviews { flex-direction: column; }
+    .box, .card { width: 100%; }
+}
+
+/* ================= Form Section ================= */
+.form-section {
+    padding: 70px 8%;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 1s ease;
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.form-container p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 6px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box textarea {
+    height: 130px;
+    resize: none;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #ff571a;
+    box-shadow: 0 0 5px rgba(255, 87, 26, 0.35);
+}
+
+.form-btn {
+    width: 100%;
+    padding: 14px;
+    background: #ff571a;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 6px;
+}
+
+.form-btn:hover {
+    background: #e44f14;
+    transform: translateY(-2px);
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 35px 25px;
+    }
+}
+
+
+/* Digital marketing section */
+.digital-marketing-section {
+    background: url("bg-tech.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 90px 20px;
+    text-align: center;
+    color: #000001;
+}
+
+.dm-title {
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    line-height: 1.1;
+}
+
+/* Flow container */
+.dm-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Text boxes (Glass effect) */
+.dm-box {
+    width: 80%;
+    max-width: 640px;
+    font-size: 22px;
+    background: #e44f14;
+    backdrop-filter: blur(12px);
+    padding: 18px 30px;
+    border-radius: 45px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+}
+
+.dm-box:hover {
+    transform: scale(1.05);
+}
+
+/* Arrows */
+.dm-arrow {
+    font-size: 42px;
+    animation: bounce 1.4s infinite ease-in-out;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(12px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .dm-title {
+        font-size: 40px;
+    }
+    .dm-box {
+        font-size: 18px;
+        padding: 15px 20px;
+    }
+}

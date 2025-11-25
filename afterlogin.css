@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fafafa;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+.logo span { color: #ff571a; }
+
+nav a {
+    margin: 0 18px;
+    font-size: 15px;
+    color: #333;
+    transition: 0.3s;
+}
+nav a:hover { color: #ff571a; }
+
+section {
+    padding: 70px 8%;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.hero-text h1 { font-size: 45px; }
+.hero-text span { color: #ff571a; }
+.hero-text p { margin: 14px 0 25px; width: 85%; }
+
+.cta, .read-more, .explore {
+    padding: 12px 22px;
+    border-radius: 6px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cta { background: #ff571a; color: white; }
+.read-more, .explore { background: #fff; border: 1px solid #ff571a; color: #ff571a; }
+.cta:hover { transform: translateY(-3px); }
+
+.services h2, .agency h2, .testimonials h2 { text-align: center; margin-bottom: 40px; }
+.service-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 24%;
+    transition: 0.3s;
+}
+.box:hover { transform: translateY(-6px); }
+
+.solutions, .agency {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.testimonials .reviews {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 32%;
+    transition: 0.3s;
+}
+.card:hover { box-shadow: 0 0 18px rgba(0,0,0,0.1); }
+
+.final-cta {
+    text-align: center;
+    background: #ff571a;
+    padding: 50px 8%;
+    color: white;
+}
+.final-cta .cta {
+    background: white;
+    color: #ff571a;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+footer .logo span { color: #ff571a; }
+
+/* ✨ Animation */
+.fade-in { animation: fade 1.2s ease-in forwards; opacity: 0; }
+@keyframes fade { to { opacity: 1; } }
+
+.slide-up { animation: up 1.2s ease-in forwards; opacity: 0; transform: translateY(40px); }
+@keyframes up { to { opacity: 1; transform: translateY(0); } }
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+    .hero, .solutions, .agency { flex-direction: column; text-align: center; }
+    .service-boxes, .testimonials .reviews { flex-direction: column; }
+    .box, .card { width: 100%; }
+}
